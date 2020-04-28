@@ -42,8 +42,6 @@ def log_into(username, password):
         print('Error 02: unable to log in')
         driver.quit()
         sys.exit()
-    else:
-        print('Error 03: Undefine Error')
 
 
 def messages():
