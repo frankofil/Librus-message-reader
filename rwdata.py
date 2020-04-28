@@ -3,11 +3,6 @@ import os
 import getpass
 
 
-username = ''
-password = ''
-comments = True
-
-
 def is_data():
     dane = False
     if os.path.exists('data.txt'):
@@ -47,7 +42,7 @@ def get_data_from_user():
         comme = True
     else:
         comme = False
-    
+
     data = open('data.txt', 'w+')
     data.write(user)
     data.write("\n")
@@ -63,6 +58,10 @@ def init():
     if is_data() is False:
         get_data_from_user()
 
-    username, password, comments= get_data_from_file()
+    username = ''
+    password = ''
+    comments = True
+
+    username, password, comments = get_data_from_file()
 
     return username, password, comments
